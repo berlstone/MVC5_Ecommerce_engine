@@ -168,23 +168,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookimagesController.cs" />
     <Compile Include="Controllers\BooksInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509191811543_InitialCreate.cs" />
-    <Compile Include="Migrations\201509191811543_InitialCreate.Designer.cs">
-      <DependentUpon>201509191811543_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509191834043_newKey.cs" />
-    <Compile Include="Migrations\201509191834043_newKey.Designer.cs">
-      <DependentUpon>201509191834043_newKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509191909066_newkey2.cs" />
-    <Compile Include="Migrations\201509191909066_newkey2.Designer.cs">
-      <DependentUpon>201509191909066_newkey2.cs</DependentUpon>
+    <Compile Include="Migrations\201510041946321_Initial.cs" />
+    <Compile Include="Migrations\201510041946321_Initial.Designer.cs">
+      <DependentUpon>201510041946321_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -257,6 +250,11 @@
     <Content Include="Views\BooksInfo\Details.cshtml" />
     <Content Include="Views\BooksInfo\Edit.cshtml" />
     <Content Include="Views\BooksInfo\Index.cshtml" />
+    <Content Include="Views\Bookimages\Create.cshtml" />
+    <Content Include="Views\Bookimages\Delete.cshtml" />
+    <Content Include="Views\Bookimages\Details.cshtml" />
+    <Content Include="Views\Bookimages\Edit.cshtml" />
+    <Content Include="Views\Bookimages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,14 +268,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509191811543_InitialCreate.resx">
-      <DependentUpon>201509191811543_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509191834043_newKey.resx">
-      <DependentUpon>201509191834043_newKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509191909066_newkey2.resx">
-      <DependentUpon>201509191909066_newkey2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510041946321_Initial.resx">
+      <DependentUpon>201510041946321_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

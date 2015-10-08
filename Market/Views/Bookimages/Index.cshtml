@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Market.Models.Books>
+﻿@model IEnumerable<Market.Models.Bookimage>
 
 @{
     ViewBag.Title = "Index";
@@ -15,13 +15,7 @@
             @Html.DisplayNameFor(model => model.ISBN)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Published)
+            @Html.DisplayNameFor(model => model.imgPath)
         </th>
         <th></th>
     </tr>
@@ -32,13 +26,7 @@
             @Html.DisplayFor(modelItem => item.ISBN)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Published)
+            @Html.DisplayFor(modelItem => item.imgPath)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.userID }) |

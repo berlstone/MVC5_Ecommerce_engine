@@ -3,7 +3,7 @@ namespace Market.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -11,12 +11,13 @@ namespace Market.Migrations
                 "dbo.Books",
                 c => new
                     {
-                        ISBN = c.Int(nullable: false, identity: true),
+                        userID = c.Int(nullable: false, identity: true),
+                        ISBN = c.Int(nullable: false),
                         Name = c.String(),
                         Author = c.String(),
                         Published = c.DateTime(nullable: false),
                     })
-                .PrimaryKey(t => t.ISBN);
+                .PrimaryKey(t => t.userID);
             
         }
         

@@ -13,12 +13,23 @@ namespace Market.Models
     public class Books
     {
         [Key]
-        public int ID { get; set; }
+        public int userID { get; set; }
         public int ISBN { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }  
         public string Author { get; set; }
         public DateTime Published { get; set; }
     }
+
+    public class Bookimage
+    {
+        [Key]
+        public int userID { get; set; }
+        public int ISBN { get; set; }
+        public string imgPath { get; set; }
+    }
+
+ 
+
 
     /*
     class represents the Entity Framework movie database context,
@@ -31,6 +42,7 @@ namespace Market.Models
     {
         // inits a object of Books which contains the fields from the database.
         public DbSet<Books> Books { get; set; }
+        public DbSet<Bookimage> Bookimage { get; set; }
         //Using Books to class to represent movies in a database.  Each instance of a 
         // Books object will correspond to a row within a database table.
         // each property of Books will map to a column

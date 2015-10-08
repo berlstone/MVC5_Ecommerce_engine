@@ -66,7 +66,6 @@ c:\users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\bin\Micro
 c:\users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.dll
 c:\users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.pdb
-C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.Migrations.InitialCreate.resources
+C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.Migrations.Initial.resources
 C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.csproj.GenerateResource.Cache
-C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.Migrations.newKey.resources
-C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.Migrations.newkey2.resources
+C:\Users\jetsk_000\documents\visual studio 2015\Projects\Market\Market\obj\Debug\Market.csprojResolveAssemblyReference.cache

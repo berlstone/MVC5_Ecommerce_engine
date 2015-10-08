@@ -10,107 +10,107 @@ using Market.Models;
 
 namespace Market.Controllers
 {
-    public class BooksInfoController : Controller
+    public class BookimagesController : Controller
     {
         private BooksDBContext db = new BooksDBContext();
 
-        // GET: BooksInfo
+        // GET: Bookimages
         public ActionResult Index()
         {
-            return View(db.Books.ToList());
+            return View(db.Bookimage.ToList());
         }
 
-        // GET: BooksInfo/Details/5
+        // GET: Bookimages/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Books books = db.Books.Find(id);
-            if (books == null)
+            Bookimage bookimage = db.Bookimage.Find(id);
+            if (bookimage == null)
             {
                 return HttpNotFound();
             }
-            return View(books);
+            return View(bookimage);
         }
 
-        // GET: BooksInfo/Create
+        // GET: Bookimages/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: BooksInfo/Create
+        // POST: Bookimages/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userID,ISBN,Name,Author,Published")] Books books)
+        public ActionResult Create([Bind(Include = "userID,ISBN,imgPath")] Bookimage bookimage)
         {
             if (ModelState.IsValid)
             {
-                db.Books.Add(books);
+                db.Bookimage.Add(bookimage);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(books);
+            return View(bookimage);
         }
 
-        // GET: BooksInfo/Edit/5
+        // GET: Bookimages/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Books books = db.Books.Find(id);
-            if (books == null)
+            Bookimage bookimage = db.Bookimage.Find(id);
+            if (bookimage == null)
             {
                 return HttpNotFound();
             }
-            return View(books);
+            return View(bookimage);
         }
 
-        // POST: BooksInfo/Edit/5
+        // POST: Bookimages/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "userID,ISBN,Name,Author,Published")] Books books)
+        public ActionResult Edit([Bind(Include = "userID,ISBN,imgPath")] Bookimage bookimage)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(books).State = EntityState.Modified;
+                db.Entry(bookimage).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(books);
+            return View(bookimage);
         }
 
-        // GET: BooksInfo/Delete/5
+        // GET: Bookimages/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Books books = db.Books.Find(id);
-            if (books == null)
+            Bookimage bookimage = db.Bookimage.Find(id);
+            if (bookimage == null)
             {
                 return HttpNotFound();
             }
-            return View(books);
+            return View(bookimage);
         }
 
-        // POST: BooksInfo/Delete/5
+        // POST: Bookimages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Books books = db.Books.Find(id);
-            db.Books.Remove(books);
+            Bookimage bookimage = db.Bookimage.Find(id);
+            db.Bookimage.Remove(bookimage);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

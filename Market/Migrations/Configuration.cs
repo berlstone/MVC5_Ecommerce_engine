@@ -9,8 +9,7 @@ namespace Market.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "Market.Models.BooksDBContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Market.Models.BooksDBContext context)
